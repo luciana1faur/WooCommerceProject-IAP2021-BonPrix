@@ -1,0 +1,138 @@
+//include custom variables default overrides here
+
+$primary: #000000;
+$gray: #e6e6e6;
+$section: #e66c7d;
+$section-opacity-8: rgba(230, 108, 125, 0.8);
+
+$theme-colors: (
+  "primary": $primary,
+  "gray": $gray,
+  "section": $section,
+  "section-opacity-8": $section-opacity-8,
+);
+
+@import "./bootstrap/scss/bootstrap";
+
+/******************HEADER*************/
+
+.announcement-bar {
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--bs-gray);
+
+  &__list {
+    height: 2.5rem;
+    margin: 0 0 0 1.875rem;
+    margin: 0 -10px;
+    display: flex;
+    align-content: right;
+
+    p {
+      margin: 0 10px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
+i {
+  size: 50px;
+  padding: 20px;
+}
+
+.site-header {
+  .aws-search-field {
+    font-size: 0.9rem;
+    font-size: 0.875rem;
+    border-style: none !important;
+  }
+}
+
+.announcement-bar-line {
+  font-size: 0.8rem;
+  border-bottom: 3px solid var(--bs-gray);
+}
+
+.section-text-color {
+  size: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff !important;
+}
+
+/*******Maine menu    Menu1 ******/
+
+.main-navigation {
+  font-weight: 600;
+  font-size: 20px;
+
+  a {
+    color: var(--bs-black);
+    padding: 1rem 1.4rem;
+  }
+
+  .menu-toggle {
+    background-color: white;
+    color: black;
+    border: none;
+  }
+
+  .sub-menu {
+    li {
+      background-color: white;
+    }
+  }
+}
+
+/******* FRONT PAGE  ******/
+
+/*******Slider  ******/
+
+.carousel {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 1%; ////???? nu merge ???
+  }
+}
+
+/*******Categories  ******/
+
+.categories {
+  background-color: #f9f9f9;
+  .categories__col {
+    height: 212px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .categories__col {
+      height: 336px;
+    }
+  }
+}
+
+/*******Footer  ******/
+
+.site-footer {
+  .menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    a {
+      color: black;
+      text-decoration: none;
+      display: block;
+      padding: 0.3rem 0;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
